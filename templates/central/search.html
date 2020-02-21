@@ -10,173 +10,41 @@
     </p>
     
     <div id="album">
+      {% for music in musics %}
         <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
+          <div class="row">
+              <div class="col-xs-2">
+                <a href="{% url 'lyrics' artist=music.artist|slugify song=music.title|slugify %}">
+                      <img src="{{ music.image }}" height="50px" alt="">
+                  </a> 
+              </div>
+              <div class="col-xs-10 pl-2">
+                  <span>
+                  <a href="{% url 'lyrics' artist=music.artist|slugify song=music.title|slugify %}" class="text-danger">
+                    {{ music.title }}
+                  </a>
+                  </span>
+                  <br />
+                  <span class="text-muted">
+                      {{ music.artist }}
+                  </span>
+              </div>
+          </div>
+          <hr />
+      </div>
+      {% empty %}
+      <h2>No results found</h2>
+      
+      {% endfor %}
+            
+        
+        
+            
+        
 
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
-
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
-
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
-
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
-
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
-
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div>
-
-        <div class="result">
-            <div class="row">
-                <div class="col-xs-2">
-                    <a href="">
-                        <img src="https://chapelboromedia.s3.amazonaws.com/uploads/2019/09/10124917/Led-Zeppelin-1.jpg" height="50px" alt="">
-                    </a> 
-                </div>
-                <div class="col-xs-10 pl-2">
-                    <span>
-                     <a href="" class="text-danger">Whole Lotta Love</a>
-                    </span>
-                    <br />
-                    <span class="text-muted">Led Zeppelin</span>
-                </div>
-            </div>
-            <hr />
-        </div> 
+        
     </div> <!-- Album -->
     
-    <!-- pagiantion -->
-    <div id="page-navigation" style="margin-bottom: 100px;">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1"><<</a>
-              </li>
-              <li class="page-item">
-                  <a class="page-link text-danger" href="#">1</a>
-                </li>
-              <li class="page-item">
-                  <a class="page-link text-danger" href="#">2</a>
-                </li>
-              <li class="page-item">
-                  <a class="page-link text-danger" href="#">3</a>
-                </li>
-              <li class="page-item">
-                <a class="page-link text-danger" href="#"> >> </a>
-              </li>
-            </ul>
-          </nav>
-    </div>  
 
   </div> <!-- Container -->
 {% endblock %}
