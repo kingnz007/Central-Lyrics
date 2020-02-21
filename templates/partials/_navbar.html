@@ -15,7 +15,7 @@
         <div class="form-wrapper justify-content-center" style="width: 40%; margin-right: 30%;">
           <form action="{% url 'search' %}" method="GET" class="form-inline my-2 my-lg-0">
             <div class="input-group w-100" id="wrap">
-              <input type="search" class="form-control" id="searchField" 
+              <input type="search" maxlength="200" class="form-control" id="searchField" 
               name="q" placeholder="Search lyrics..." autofocus value="{{ values.q }}">
               <div class="input-group-append">
                 <button type="submit" class="btn btn-info my-2 my-sm-0" id="searchButton">
