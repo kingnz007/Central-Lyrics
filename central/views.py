@@ -14,22 +14,16 @@ def search(request):
     global genius
     if 'q' in request.GET:
         query = request.GET['q']
-
         
         titles, artists, images = ([] for _ in range(3))
         songs = genius.search_genius(query)
-
-
         
         for song in songs['hits']:
             titles.append(song['result']['title'])
             artists.append(song['result']['primary_artist']['name'])
             images.append(song['result']['primary_artist']['image_url'])
 
-        musics = [{'image': t[0], 'title': t[1], 'artist':t[2]} for t in zip(images, titles, artists)]
-        
-        
-        
+        musics = [{'image': t[0], 'title': t[1], 'artist':t[2]} for t in zip(images, titles, artists)]       
             
     context = {
         'musics': musics,
@@ -37,6 +31,7 @@ def search(request):
     }
 
     return render(request, 'central/search.html', context)
+    
 
 def lyrics(request, song='', artist=''):   
     global genius
@@ -47,4 +42,3 @@ def lyrics(request, song='', artist=''):
     }
 
     return render(request, 'central/lyrics.html', context)
-

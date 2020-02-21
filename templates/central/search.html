@@ -1,50 +1,41 @@
 {% extends 'base.html' %}
 
-
 {% block title %} | Search Results {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <p>
+  <div class="container mt-5">
+      <p>
         Showing results for ' <span class="text-danger">Whole Lotta Love</span>':
-    </p>
-    
-    <div id="album">
-      {% for music in musics %}
-        <div class="result">
-          <div class="row">
-              <div class="col-xs-2">
-                <a href="{% url 'lyrics' artist=music.artist|slugify song=music.title|slugify %}">
-                      <img src="{{ music.image }}" height="50px" alt="">
-                  </a> 
-              </div>
-              <div class="col-xs-10 pl-2">
-                  <span>
-                  <a href="{% url 'lyrics' artist=music.artist|slugify song=music.title|slugify %}" class="text-danger">
-                    {{ music.title }}
-                  </a>
-                  </span>
-                  <br />
-                  <span class="text-muted">
-                      {{ music.artist }}
-                  </span>
-              </div>
-          </div>
-          <hr />
-      </div>
-      {% empty %}
-      <h2>No results found</h2>
+      </p>
       
-      {% endfor %}
-            
-        
-        
-            
-        
+      <div id="album">
+        {% for music in musics %}
+          <div class="result">
+            <div class="row">
+                <div class="col-xs-2">
+                <a href="{% url 'lyrics' artist=music.artist|slugify song=music.title|slugify %}">
+                    <img src="{{ music.image }}" height="50px" alt="">
+                    </a> 
+                </div>
+                <div class="col-xs-10 pl-2">
+                    <span>
+                    <a href="{% url 'lyrics' artist=music.artist|slugify song=music.title|slugify %}" class="text-danger">
+                      {{ music.title }}
+                    </a>
+                    </span>
+                    <br />
+                    <span class="text-muted">
+                        {{ music.artist }}
+                    </span>
+                </div>
+            </div>
+            <hr />
+        </div>
 
+        {% empty %}
+          <h2>No results found</h2>
+        {% endfor %}
         
-    </div> <!-- Album -->
-    
-
-  </div> <!-- Container -->
+      </div> <!-- Album -->
+    </div> <!-- Container -->
 {% endblock %}
