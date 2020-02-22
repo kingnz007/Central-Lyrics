@@ -7,7 +7,7 @@ from django.views.decorators.cache import cache_page
 import lyricsgenius
 from pprint import pprint
 # Enter your genius api key here inside Genius('Your api key')
-genius = lyricsgenius.Genius("4FMfq4F26i2Xz8JSEAsTInmjHBvGRK9Vz9NBT58L0ztn3bC7mPi8vg7MODxax_Pj")
+genius = lyricsgenius.Genius("Your api key here")
 genius.skip_non_songs = True
 
 def index(request):

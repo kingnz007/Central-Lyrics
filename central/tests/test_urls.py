@@ -1,7 +1,6 @@
 '''
 Test urls
 '''
-
 from django.test import SimpleTestCase
 from django.urls import resolve, reverse
 from central.views import index, search, lyrics
