@@ -1,13 +1,16 @@
 '''
 Views.py. Handles the views for home page, search page and lyrics.
-Add your genius api key below
+Add your genius api key in ACCESS_TOKEN
 '''
 from django.shortcuts import render
 from django.views.decorators.cache import cache_page
 import lyricsgenius
 from pprint import pprint
-# Enter your genius api key here inside Genius('Your api key')
-genius = lyricsgenius.Genius("Your api key here")
+
+# Enter your CLIENT ACCESS TOKEN
+ACCESS_TOKEN = "YOUR CLIENT ACCESS TOKEN HERE"
+
+genius = lyricsgenius.Genius(ACCESS_TOKEN)
 genius.skip_non_songs = True
 
 def index(request):
