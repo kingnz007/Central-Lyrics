@@ -13,7 +13,11 @@ Then, run the following command on terminal.
 ```
 python manage.py runserver
 ```
-Also make sure you've django and lyricsgenius installed in your environment.<br />
+Make sure you've django and lyricsgenius installed in your environment.
+```
+pip install Django
+pip install lyricsgenius
+```
 Central lyrics doesn't have its own database and completely depends on Genius API for its content. <br /><br />
 Feel free to contribute to this project.
 &hearts; &hearts; &hearts;
