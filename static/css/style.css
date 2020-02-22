@@ -1,0 +1,55 @@
+.terms-condition {
+    height: 40px;
+    display: table;
+}
+
+.terms-condition p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.form-wrapper {
+    display: inline;
+}
+
+#searchIcon {
+    display: none;
+}
+
+
+#thumbnail {
+    margin-left: 25%;
+}
+
+#album {
+    margin: 40px 0 40px 80px;
+}
+
+
+@media (max-width: 767.98px) {
+    div.form-wrapper {
+        display: none;
+    }
+
+    #searchIcon {
+        display: inline;
+    }
+
+    #thumbnail {
+       margin: 0;
+       text-align: center;
+    }
+
+    #album {
+        margin-left: 20px;
+    }
+
+}
