@@ -1,7 +1,7 @@
 # Central-Lyrics
-Get lyrics of any song on Central Lyrics.
-Central Lyrics gets the data from <a href="https://genius.com/">genius</a> through its API.
-It has songs, lyrics, test cases, cache loading, etc features.<br />
+Get lyrics of any song on Central Lyrics.<br />
+Central Lyrics gets the data from <a href="https://genius.com/">genius</a> through its API. <br />
+It has songs, lyrics, test cases, cache loading, etc features.<br /> <br />
 But first, you need to get your CLIENT_ACCESS_TOKEN from <a href="https://genius.com/api-clients">here.</a><br />
 Then, add the CLIENT_ACCESS_TOKEN to the ACCESS_TOKEN variable at <i>'central/views.py'</i>.
 ```
