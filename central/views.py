@@ -56,7 +56,7 @@ def search(request):
 @cache_page(60*3)    
 def lyrics(request, song='', artist=''):   
     '''
-    Retrive adn display song lyrics
+    Retrieve and  display song lyrics
     '''
     global genius
 
