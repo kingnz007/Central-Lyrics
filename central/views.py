@@ -63,7 +63,7 @@ def lyrics(request, song='', artist=''):
     try:
         lyrics = genius.search_song(song, artist=artist, get_full_info=False)
     except:
-        print("Unable to retrive lyrics at the moment. Please try again.")
+        print("Unable to retrieve lyrics at the moment. Please try again.")
 
     context = {
         'lyrics': lyrics
