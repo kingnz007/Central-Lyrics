@@ -4,13 +4,13 @@ Add your genius api key in ACCESS_TOKEN
 '''
 from django.shortcuts import render
 from django.views.decorators.cache import cache_page
-import lyricsgenius
+import lyricsgenius as LG
 from pprint import pprint
 
 # Enter your CLIENT ACCESS TOKEN
 ACCESS_TOKEN = "YOUR CLIENT ACCESS TOKEN HERE"
 
-genius = lyricsgenius.Genius(ACCESS_TOKEN)
+genius = LG.Genius(ACCESS_TOKEN)
 genius.skip_non_songs = True
 
 def index(request):
