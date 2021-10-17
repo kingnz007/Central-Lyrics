@@ -28,7 +28,7 @@ def search(request):
     musics = []
     if request.method == 'GET':
         if 'q' in request.GET:
-            query = request.GET['q']
+            query = request.GET.get(q, '')
             
             titles, artists, images = ([] for _ in range(3))
             try:
