@@ -34,7 +34,7 @@ def search(request):
             try:
                 songs = genius.search_genius(query)
             except:
-                print("There's something wrong with your api key. Please try again.")
+                print("There's something wrong with your API key. Please try again.")
             
             if songs is not None: 
                 for song in songs['hits']:
